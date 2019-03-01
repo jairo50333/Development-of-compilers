@@ -78,9 +78,6 @@ class ScannerHelper
     keywords.Add("cycle",(int)Tokens.CYCLE);
     keywords.Add("write",(int)Tokens.WRITE);
     keywords.Add("var",(int)Tokens.VAR);
-    keywords.Add("if",(int)Tokens.IF);
-    keywords.Add("then",(int)Tokens.THEN);
-    keywords.Add("else",(int)Tokens.ELSE);
   }
   public static int GetIDToken(string s)
   {

@@ -64,7 +64,7 @@ namespace ProgramTree
             StList.Add(stat);
         }
     }
-    
+
     public class WhileNode : StatementNode
     {
         public ExprNode Expr { get; set; }
@@ -75,7 +75,7 @@ namespace ProgramTree
             Stat = stat;
         }
     }
-    
+
     public class RepeatNode : StatementNode
     {
         public ExprNode Expr { get; set; }
@@ -86,7 +86,7 @@ namespace ProgramTree
             Expr = expr;
         }
     }
-    
+
     public class ForNode : StatementNode
     {
         public IdNode Id { get; set; }
@@ -123,7 +123,7 @@ namespace ProgramTree
             ElseState = else_state;
         }
     }
-    
+
     public class VarDefNode : StatementNode
     {
         public List<IdNode> id_list { get; set; }
@@ -133,7 +133,7 @@ namespace ProgramTree
         }
         public void Add(IdNode id)
         {
-            id_list.Add(id);   
+            id_list.Add(id);
         }
     }
 
@@ -149,6 +149,6 @@ namespace ProgramTree
             Oper = oper;
         }
     }
-    
+
 
 }

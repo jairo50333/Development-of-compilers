@@ -31,7 +31,8 @@ namespace QUT.Gppg
         /// <summary>
         /// The abstract scanner for this parser.
         /// </summary>
-        protected AbstractScanner<TValue, TSpan> Scanner {
+        protected AbstractScanner<TValue, TSpan> Scanner
+        {
             get { return scanner; }
             set { scanner = value; }
         }
@@ -108,17 +109,17 @@ namespace QUT.Gppg
         /// <param name="rules">The array of Rule objects</param>
         protected void InitRules(Rule[] rules) { this.rules = rules; }
 
-      /// <summary>
-      /// Initialization method to allow derived classes to
-      /// insert the states table into this base class.
-      /// </summary>
-      /// <param name="states">The pre-initialized states table</param>
+        /// <summary>
+        /// Initialization method to allow derived classes to
+        /// insert the states table into this base class.
+        /// </summary>
+        /// <param name="states">The pre-initialized states table</param>
         protected void InitStates(State[] states) { this.states = states; }
 
-      /// <summary>
-      /// OBSOLETE FOR VERSION 1.4.0
-      /// </summary>
-      /// <param name="size"></param>
+        /// <summary>
+        /// OBSOLETE FOR VERSION 1.4.0
+        /// </summary>
+        /// <param name="size"></param>
         protected void InitStateTable(int size) { states = new State[size]; }
 
         /// <summary>
@@ -338,7 +339,7 @@ namespace QUT.Gppg
                     //  Default action "@$ = @1.Merge(@N)" for location info.
                     TSpan at1 = LocationStack[LocationStack.Depth - rule.RightHandSide.Length];
                     TSpan atN = LocationStack[LocationStack.Depth - 1];
-                    CurrentLocationSpan = 
+                    CurrentLocationSpan =
                         ((at1 != null && atN != null) ? at1.Merge(atN) : default(TSpan));
                 }
             }
@@ -417,15 +418,15 @@ namespace QUT.Gppg
 
         private void ReportError()
         {
-            object[] args = new object[FsaState.ParserTable.Keys.Count+1];
+            object[] args = new object[FsaState.ParserTable.Keys.Count + 1];
             args[0] = TerminalToString(NextToken);
-            int i=1;
+            int i = 1;
             foreach (int terminal in FsaState.ParserTable.Keys)
             {
                 args[i] = TerminalToString(terminal);
                 i++;
             }
-            scanner.yyerror("",args);
+            scanner.yyerror("", args);
         }
 
         private void ShiftErrorToken()

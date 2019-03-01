@@ -1,0 +1,12 @@
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module6\bin\Debug\SimpleLang.exe
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module6\bin\Debug\SimpleLang.pdb
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module6\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module6\bin\Debug\System.Numerics.dll
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module6\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module6\bin\Debug\es\System.Numerics.resources.dll
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module6\bin\Debug\ru\System.Numerics.resources.dll
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module6\obj\x86\Debug\ParserAST.csprojAssemblyReference.cache
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module6\obj\x86\Debug\ParserAST.csproj.CoreCompileInputs.cache
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module6\obj\x86\Debug\ParserAST.csproj.CopyComplete
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module6\obj\x86\Debug\SimpleLang.exe
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module6\obj\x86\Debug\SimpleLang.pdb

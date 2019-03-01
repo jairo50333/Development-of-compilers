@@ -17,12 +17,12 @@ namespace SimpleCompiler
 
                 Scanner scanner = new Scanner();
                 scanner.SetSource(Text, 0);
-            
+
                 Parser parser = new Parser(scanner);
-                      
+
                 var b = parser.Parse();
                 if (!b)
-		            Console.WriteLine("Ошибка");
+                    Console.WriteLine("Ошибка");
                 else Console.WriteLine("Программа распознана");
             }
             catch (FileNotFoundException)

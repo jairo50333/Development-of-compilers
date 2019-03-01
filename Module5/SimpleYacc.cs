@@ -3,9 +3,9 @@
 // (see accompanying GPPGcopyright.rtf)
 
 // GPPG version 1.3.6
-// Machine:  DESKTOP-0VS8TB2
-// DateTime: 21.12.2018 12:46:45
-// UserName: Admin
+// Machine:  DESKTOP-GDIU3G7
+// DateTime: 3/1/2019 2:55:24 AM
+// UserName: jairo
 // Input file <SimpleYacc.y>
 
 // options: no-lines gplex

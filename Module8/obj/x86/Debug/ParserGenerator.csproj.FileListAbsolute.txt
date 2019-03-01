@@ -1,0 +1,10 @@
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module8\bin\Debug\SimpleLang.exe
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module8\bin\Debug\SimpleLang.pdb
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module8\bin\Debug\System.Numerics.dll
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module8\bin\Debug\es\System.Numerics.resources.dll
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module8\bin\Debug\ru\System.Numerics.resources.dll
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module8\obj\x86\Debug\ParserGenerator.csprojAssemblyReference.cache
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module8\obj\x86\Debug\ParserGenerator.csproj.CoreCompileInputs.cache
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module8\obj\x86\Debug\ParserGenerator.csproj.CopyComplete
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module8\obj\x86\Debug\SimpleLang.exe
+C:\Users\jairo\Documents\mmcs-cs311-assignments-jairo50333-master\Module8\obj\x86\Debug\SimpleLang.pdb

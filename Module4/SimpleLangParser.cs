@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using SimpleLexer;
@@ -32,20 +32,21 @@ namespace SimpleLangParser
             E();
         }
 
-        public void Assign() 
+        public void Assign()
         {
             l.NextLexem();  // пропуск id
             if (l.LexKind == Tok.ASSIGN)
             {
                 l.NextLexem();
             }
-            else {
+            else
+            {
                 SyntaxError(":= expected");
             }
             Expr();
         }
 
-        public void StatementList() 
+        public void StatementList()
         {
             Statement();
             while (l.LexKind == Tok.SEMICOLON)
@@ -55,18 +56,18 @@ namespace SimpleLangParser
             }
         }
 
-        public void Statement() 
+        public void Statement()
         {
             switch (l.LexKind)
             {
                 case Tok.BEGIN:
                     {
-                        Block(); 
+                        Block();
                         break;
                     }
                 case Tok.CYCLE:
                     {
-                        Cycle(); 
+                        Cycle();
                         break;
                     }
                 case Tok.WHILE:
@@ -97,7 +98,7 @@ namespace SimpleLangParser
             }
         }
 
-        public void Block() 
+        public void Block()
         {
             l.NextLexem();    // пропуск begin
             StatementList();
@@ -111,7 +112,7 @@ namespace SimpleLangParser
             }
         }
 
-        public void Cycle() 
+        public void Cycle()
         {
             l.NextLexem();  // пропуск cycle
             Expr();
@@ -126,7 +127,7 @@ namespace SimpleLangParser
                 l.NextLexem();
             else
                 SyntaxError("do expected");
-            Statement();      
+            Statement();
         }
 
         public void For()
@@ -172,7 +173,7 @@ namespace SimpleLangParser
                 Statement();
             }
         }
-        
+
         //E ::= T A
         public void E()
         {
@@ -192,9 +193,9 @@ namespace SimpleLangParser
         {
             if (l.LexKind == Tok.ID || l.LexKind == Tok.INUM)
             {
-                    l.NextLexem();
-             }
-             else if (l.LexKind == Tok.LEFT_BRACKET)
+                l.NextLexem();
+            }
+            else if (l.LexKind == Tok.LEFT_BRACKET)
             {
                 l.NextLexem();
                 Expr();
@@ -235,7 +236,7 @@ namespace SimpleLangParser
             }
         }
 
-        public void SyntaxError(string message) 
+        public void SyntaxError(string message)
         {
             var errorMessage = "Syntax error in line " + l.LexRow.ToString() + ":\n";
             errorMessage += l.FinishCurrentLine() + "\n";
@@ -246,6 +247,6 @@ namespace SimpleLangParser
             }
             throw new ParserException(errorMessage);
         }
-   
+
     }
 }

@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -55,9 +55,11 @@ namespace SimpleLexer
         ELSE,
         LEFT_BRACKET,
         RIGHT_BRACKET,
+        LEFT_BRACKET_SQUARE,
+        RIGHT_BRACKET_SQUARE
     }
 
-     public class Lexer
+    public class Lexer
     {
         private int position;
         private char currentCh;                      // Текущий символ
@@ -70,7 +72,7 @@ namespace SimpleLexer
         public int LexValue;                        // Целое значение, связанное с лексемой LexNum
 
         private string CurrentLineText;  // Накапливает символы текущей строки для сообщений об ошибках
-        
+
 
         public Lexer(TextReader input)
         {
@@ -83,7 +85,8 @@ namespace SimpleLexer
             NextLexem();    // Считать первую лексему, заполнив LexText, LexKind и, возможно, LexValue
         }
 
-        public void Init() {
+        public void Init()
+        {
 
         }
 
@@ -175,7 +178,7 @@ namespace SimpleLexer
                 NextCh();
                 while (currentCh != '}')
                 {
-                    if ((int) currentCh == 0)
+                    if ((int)currentCh == 0)
                     {
                         LexError("Expected comment closing /'}/'");
                     }
@@ -206,7 +209,7 @@ namespace SimpleLexer
                             LexText = "";
                             break;
                         }
-                        if ((int) currentCh == 0)
+                        if ((int)currentCh == 0)
                         {
                             LexKind = Tok.EOF;
                             return;
@@ -237,6 +240,16 @@ namespace SimpleLexer
             else if (currentCh == ')')
             {
                 LexKind = Tok.RIGHT_BRACKET;
+                NextCh();
+            }
+            else if (currentCh == '[')
+            {
+                LexKind = Tok.LEFT_BRACKET_SQUARE;
+                NextCh();
+            }
+            else if (currentCh == ']')
+            {
+                LexKind = Tok.RIGHT_BRACKET_SQUARE;
                 NextCh();
             }
             else if (currentCh == ':')
@@ -375,9 +388,11 @@ namespace SimpleLexer
             var result = t.ToString();
             switch (t)
             {
-                case Tok.ID: result += ' ' + LexText;
+                case Tok.ID:
+                    result += ' ' + LexText;
                     break;
-                case Tok.INUM: result += ' ' + LexValue.ToString();
+                case Tok.INUM:
+                    result += ' ' + LexValue.ToString();
                     break;
             }
             return result;
